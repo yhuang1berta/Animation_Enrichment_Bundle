@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+ 	<meta charset="utf-8">
+    <title>Animation Enrichment Bundle demo</title>
+    <link rel="stylesheet" href="./AEB.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script defer type="text/javascript" src='./js/AEB.js'></script>
+    <script defer type="text/javascript" src='./js/intro.js'></script>
+
+
+ </head>
+ <body>
+  <div>
+    <main id="main-content">
+      <nav id="navbar">
+        <br/>
+        <br/>
+        <br/>
+        <h2 id="navbar-title">Animation Enrichment Bundle (AEB)</h2>
+        <ul>
+          <li class="navbar-li"><h3>Developped in June 2020</h3></li>
+          <li class="navbar-li"><h3><a class="navbar-link" href="https://www.linkedin.com/in/ye-huang-6923951b9/">By Ye Huang</a></h3></li>
+            <canvas id="navbar-canvas" width="400px" height="200px">
+            </canvas>
+        </ul>
+
+      </nav>
+      <div class="header">
+        <ul class="header-menu">
+          <li class="header-item"><a class="header-link" href="./example.html">Introduction</a></li>
+          <li class="header-item"><a class="header-link" href="./documentation.html">Documentation</a></li>
+          <li class="header-item"><a class="header-link" href="./textFall.html">Text Fall</a></li>
+          <li class="header-item"><a class="header-link" href="./disperse.html">Disperse</a></li>
+          <li class="header-item"><a class="header-link" href="./scatter.html">Scatter</a></li>
+          <li class="header-item"><a class="header-link" href="./assemble.html">Assemble</a></li>
+        </ul>
+      </div>
+
+      <div id="introduction">
+        <h3>Animation Enrichment Bundle (AEB)</h3>
+        <p class="intro-p">This library's primary function is to plot text with points on any canvas object and let the user interact with those points by utilizes the canvas element and javascript's animation feature.<p>
+        </br/>
+        <img src="./img/introduction_demo.png" id="intro-img">
+        <ul id="why-aeb"> Why AEB?
+          <li>
+            <h4>Easy to use!</h4>
+          </li>
+          <li>
+            <h4>Highly customizable!</h4>
+          </li>
+          <li>
+            <h4>Only require Vanilla JS!</h4>
+          </li>
+        </ul>
+        <p id="intro-warning">(NOTE: Please run only ONE animation on a webpage at a time!)</p>
+        <br/>
+        <ul class="animation-list"> This library provides its users with 4 animations:
+          <li>
+            <p><a class="animation-link" href="./textFall.html">Text Fall</a>: Ploting the passed in text using points on canvas.<br/>
+            <p class="following-p">After clicking on canvas, the points will start to bounce around inside the canvas!</p>
+            <p class="following-p">Clicking more than once will result in the points to accelerate.</p>
+          </li>
+          <li>
+            <p><a class="animation-link" href="./disperse.html">Disperse</a>: Ploting the passed in text using points on canvas.<br/>
+            <p class="following-p">Moving the cursor close to the points will result them to first scatter, then comes back if the cursor is far away enough!</p>
+          </li>
+          <li>
+            <p><a class="animation-link" href="./scatter.html">Scatter</a>: Ploting the passed in text using points on canvas.<br/>
+            <p class="following-p">Moving the cursor close to the points will result them to first scatter, then the points will stay at where they are!</p>
+          </li>
+          <li>
+            <p><a class="animation-link" href="./assemble.html">Assemble</a>: There would be points bouncing in the canvas at first.<br/>
+            <p class="following-p">After clicking on canvas, the points will start to travel to their destination, and eventually forming the text!</p>
+          </li>
+        </ul>
+      </div>
+    </main>
+  </div>
+ </body>
+
+</html>

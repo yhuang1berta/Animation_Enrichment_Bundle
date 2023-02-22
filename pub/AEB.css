@@ -1,0 +1,308 @@
+/* html tag setting (last update version: alpha)*/
+
+canvas {
+    padding: 0;
+    margin: auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: white;
+}
+
+#main-content {
+    height: 100%;
+    width: 100%;
+}
+
+#navbar {
+    position: fixed;
+    width: 30%;
+    height: 90%;
+    background-color: #00204E;
+    color: white;
+    border-radius: 10%;
+    border: 5px solid black;
+}
+
+#navbar-title {
+    margin: 5px;
+    text-align: center;
+}
+
+.navbar-li {
+    margin: 15%;
+    list-style-type: none;
+    text-align: center;
+    padding: 0%;
+}
+
+
+
+#navbar-canvas {
+    position: relative;
+    border: 5px solid black;
+    bottom: 0%;
+    left: -4%;
+}
+
+.navbar-link {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar-link:hover {
+    background-color: lightgray;
+    border-radius: 10%;
+}
+
+.header {
+    padding: 10px;
+    text-align: justify;
+    margin-left: 33%;
+    height: 40px;
+    width: 60%;
+    background-color: #009879;
+    border: 5px solid black;
+    border-radius: 10%;
+}
+
+.header-menu {
+    list-style-type: none;
+    margin: 0%;
+    padding: 0%;
+    display: inline;
+    overflow: hidden;
+}
+
+.header-item {
+    float: left;
+    margin-left: 30px;
+    font-size: 30px;
+}
+
+.header-item:hover {
+    background-color: lightgray;
+    border-radius: 10%;
+}
+
+.header-link {
+    color: white;
+    text-decoration: none;
+}
+
+#introduction {
+    position: absolute;
+    margin-top: 4%;
+    margin-left: 33%;
+    width: 65%;
+    border: 5px dashed black;
+    border-radius: 10%;
+    font-size: large;
+}
+
+.intro-p {
+    position: relative;
+    left: 5%;
+    width: 90%;
+}
+
+#intro-img {
+    width: 60%;
+    margin-left: 10px;
+    border: 3px solid grey;
+    border-radius: 10%;
+    display: inline-block;
+}
+
+#why-aeb {
+    position: absolute;
+    right: 8%;
+    text-align: center;
+    font-size: x-large;
+    top: 12.5%;
+}
+
+#intro-warning {
+    text-align: center;
+    color: darkred;
+}
+
+.animation-list {
+    position: relative;
+    width: 90%;
+    list-style-type: circle;
+}
+
+.animation-link {
+    color: black;
+    text-decoration: none;
+    padding-left: 5%;
+}
+
+.animation-link:hover {
+    background-color: lightgray;
+    border-radius: 10%;
+}
+
+.following-p {
+    margin-left: 120px;
+}
+
+h3 {
+    text-align: center;
+    margin: 5px;
+}
+
+h2 {
+    text-align: center;
+    margin: 5px;
+}
+
+h1 {
+    text-align: center;
+    margin: 5px;
+}
+
+#demo-body {
+    background-color: antiquewhite;
+}
+
+.header-demo {
+    padding: 10px;
+    text-align: justify;
+    /* position: fixed; */
+    top: 20px;
+    margin-left: 20%;
+    height: 40px;
+    width: 60%;
+    background-color: #009879;
+    border: 5px solid black;
+    border-radius: 10%;
+}
+
+.demo-div {
+    position: relative;
+    margin-top: 80px;
+    width: 60%;
+    margin-left: 20%;
+    border: 5px dashed black;
+}
+
+#demo-canvas {
+    /* width: 600px;
+    height: 400px; */
+    margin-top: 350px;
+}
+
+#general-doc {
+    margin-top: 70px;
+    display: inline-block;
+    margin-left: 20%;
+}
+
+#general-doc-title {
+    position: relative;
+    top: -30px;
+    text-align: center;
+}
+
+#general-doc-note {
+    text-align: center;
+}
+
+#lib-instance {
+    display: inline-block;
+}
+
+.doc-title {
+    text-align: center;
+    background-color: #009879;
+    width: 40%;
+    border-radius: 5px 5px 5px 5px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+    color: white;
+}
+
+#doc-warning {
+    text-align: left;
+    color: darkred;
+    padding-left: 5px;
+}
+
+.doc-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+}
+
+.doc-table thead tr {
+    background-color: #009879;
+    color: white;
+    text-align: left;
+    font-weight: bold;
+}
+
+.doc-table th,
+.doc-table td {
+    padding: 12px 15px;
+}
+
+.doc-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.doc-table tbody tr:hover {
+    background-color: lightgray;
+}
+
+.doc-table tbody:nth-of-type(even) tr {
+    background-color: #f3f3f3;
+}
+
+.doc-table tbody:nth-of-type(even) tr:hover {
+    background-color: lightgray;
+}
+
+.doc-table tbody:last-of-type tr {
+    border-bottom: 2px solid #009879;
+}
+
+.code-display-div {
+    background-color: lightgray;
+    border-radius: 5px 5px 5px 5px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+    max-width: 80%;
+    text-align: justify;
+}
+
+.code-display {
+    position: relative;
+    color: black;
+    left: 20px;
+    padding: 5px;
+}
+
+.ex-title {
+    text-align: left;
+    background-color: #00204E;
+    width: 40%;
+    border-radius: 5px 5px 5px 5px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+    color: white;
+    padding-left: 10px;
+}
+
+/* .demo-p {
+    margin-top: 60px;
+    border: 3px dashed black;
+} */

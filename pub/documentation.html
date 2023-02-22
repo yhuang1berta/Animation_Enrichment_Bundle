@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+ 	<meta charset="utf-8">
+    <title>Text Fall Demo</title>
+    <link rel="stylesheet" href="./AEB.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+
+
+ </head>
+ <body>
+      <div class="header-demo">
+        <ul class="header-menu">
+          <li class="header-item"><a class="header-link" href="./example.html">Introduction</a></li>
+          <li class="header-item"><a class="header-link" href="./documentation.html">Documentation</a></li>
+          <li class="header-item"><a class="header-link" href="./textFall.html">Text Fall</a></li>
+          <li class="header-item"><a class="header-link" href="./disperse.html">Disperse</a></li>
+          <li class="header-item"><a class="header-link" href="./scatter.html">Scatter</a></li>
+          <li class="header-item"><a class="header-link" href="./assemble.html">Assemble</a></li>
+        </ul>
+      </div>
+    <div id="general-doc">
+        <h1 id="general-doc-title">Animation Enrichment Bundle (AEB) Documentation</h1>
+        <h4 id="general-doc-note">(Note: all property name used to initialize the library can be accessed directly, example of accessing color argument: lib.color)</h4>
+            <!-- <img src="./img/lib-instance.png" width="40%" height="40%" id="lib-instance"> -->
+            <h4 id="doc-warning">Only <span>ONE</span> animation can be run on a webpage at a time!</h4>
+            <h3 class="doc-title">AEB instance</h3>
+            <table class="doc-table">
+                <thead>
+                    <tr>
+                        <th>Property Name</th>
+                        <th>Default value</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>canvas</td>
+                        <td>null</td>
+                        <td>html canvas object</td>
+                        <td>"The canvas object wish to be used to play the animation on."</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>r</td>
+                        <td>5</td>
+                        <td>int</td>
+                        <td>"The radius of the points on canvas."</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>border_width</td>
+                        <td>5</td>
+                        <td>int</td>
+                        <td>"The width of the canvas' border (if any)."<br/>
+                        after providing border_width, AEB will set the canvas' border to this width with solid black color!</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>color</td>
+                        <td>"black"</td>
+                        <td>string</td>
+                        <td>"The color of the points."<br/>
+                            "If color is "random", then all points' color would be randomized (as shown in the introduction page)"<br/>
+                            (Note: if color passed in is not a valid css color string, the color would be set to "black" by default.)
+                        </td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>filled</td>
+                        <td>false</td>
+                        <td>boolean</td>
+                        <td>"Whether to fill the points with current color."</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>horizontal_spacing</td>
+                        <td>10</td>
+                        <td>int/float</td>
+                        <td>"The spacing between each point horizontally in terms of its radius."</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>vertical_spacing</td>
+                        <td>15</td>
+                        <td>int/float</td>
+                        <td>"The spacing between each point vertically in terms of its radius."</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3 class="ex-title">AEB example</h3>
+            <div class="code-display-div">
+                <code class="code-display">
+                    const c = document.createElement("canvas") <br/>
+                    // create an instance of AEB library with canvas c, filled with points <br/>
+                    // with radius of 6 pixels, 5 pixels border, and default spacing between the points <br/>
+                    const lib = AEB(c, 6, 5, "blue", true, 10, 15)
+                </code>
+            </div>
+            <br/>
+            <h3 class="doc-title">textFall Animation</h3>
+            <table class="doc-table">
+                <thead>
+                    <tr>
+                        <th>Property Name</th>
+                        <th>Default value</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>text</td>
+                        <td>"TEXT FALL"</td>
+                        <td>string</td>
+                        <td>"The text wish to be rendered on canvas." All letters are Captialized at the moment!<br/>
+                            (note: use "/" to switch line in the input text)
+                        </td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>x_modifier</td>
+                        <td>100</td>
+                        <td>int/float</td>
+                        <td>"The starting x coordinate of the top left point."</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>y_modifier</td>
+                        <td>100</td>
+                        <td>int/float</td>
+                        <td>"The starting y coordinate of the top left point."</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3 class="ex-title">textFall example</h3>
+            <div class="code-display-div">
+                <code class="code-display">
+                    const c = document.createElement("canvas") <br/>
+                    const lib = AEB(c, 6, "blue", true, 10, 15) <br/>
+                    // add Text Fall animation on canvas c, points will plot out the word "Text Fall"<br/>
+                    // top left point starts at (50, 150) <br/>
+                    lib.textFall("text fall", 50, 150)<br/><br/>
+
+                    // Check out Text Fall demo in header to see effect!
+                </code>
+            </div>
+            <br/>
+            <h3 class="doc-title">disperse Animation</h3>
+            <table class="doc-table">
+                <thead>
+                    <tr>
+                        <th>Property Name</th>
+                        <th>Default value</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>text</td>
+                        <td>"DISPERSE"</td>
+                        <td>string</td>
+                        <td>"The text wish to be rendered on canvas." All letters are Captialized at the moment!<br/>
+                            (note: use "/" to switch line in the input text)
+                        </td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>x_modifier</td>
+                        <td>100</td>
+                        <td>int/float</td>
+                        <td>"The starting x coordinate of the top left point."</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>y_modifier</td>
+                        <td>100</td>
+                        <td>int/float</td>
+                        <td>"The starting y coordinate of the top left point."</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>cursor_range</td>
+                        <td>100</td>
+                        <td>int/float</td>
+                        <td>"The range of points that will be affected as the cursor moves, the larger the number, the wider the effect range."</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>return_speed</td>
+                        <td>15</td>
+                        <td>int/float</td>
+                        <td>"The speed that controls how fast the points would return to their original position, the larger the number, the slower they return."</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>noise</td>
+                        <td>0.5</td>
+                        <td>float</td>
+                        <td>"The noise argument controls how much fluctuation the points will make, the larger the number, the more vibrant the points will be."</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>random_start</td>
+                        <td>false</td>
+                        <td>boolean</td>
+                        <td>"Whether the starting position will be randomized, if false, the points will start at their desired locatoin."</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3 class="ex-title">disperse example</h3>
+            <div class="code-display-div">
+                <code class="code-display">
+                    const c = document.createElement("canvas") <br/>
+                    const lib = AEB(c, 6, "blue", true, 10, 15) <br/>
+                    // add disperse animation on canvas c, points will plot out the word "DISPERSE"<br/>
+                    // top left point starts at (70, 150),  cursor's range at 150px<br/>
+                    // return speed at 20, and noise factor of 0.5, points start at their original location<br/>
+                    lib.disperse("disperse", 70, 150, 150, 20, 0.5, false)<br/><br/>
+
+                    // Check out Disperse demo in header to see effect!
+                </code>
+            </div>
+            <br/>
+            <h3 class="doc-title">scatter Animation</h3>
+            <table class="doc-table">
+                <thead>
+                    <tr>
+                        <th>Property Name</th>
+                        <th>Default value</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>text</td>
+                        <td>"SCATTER"</td>
+                        <td>string</td>
+                        <td>"The text wish to be rendered on canvas." All letters are Captialized at the moment!<br/>
+                            (note: use "/" to switch line in the input text)
+                        </td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>x_modifier</td>
+                        <td>100</td>
+                        <td>int/float</td>
+                        <td>"The starting x coordinate of the top left point."</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>y_modifier</td>
+                        <td>100</td>
+                        <td>int/float</td>
+                        <td>"The starting y coordinate of the top left point."</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>cursor_range</td>
+                        <td>100</td>
+                        <td>int/float</td>
+                        <td>"The range of points that will be affected as the cursor moves, the larger the number, the wider the effect range."</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>noise</td>
+                        <td>0.5</td>
+                        <td>float</td>
+                        <td>"The noise argument controls how much fluctuation the points will make, the larger the number, the more vibrant the points will be."</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3 class="ex-title">scatter example</h3>
+            <div class="code-display-div">
+                <code class="code-display">
+                    const c = document.createElement("canvas") <br/>
+                    const lib = AEB(c, 6, "blue", true, 10, 15) <br/>
+                    // add disperse animation on canvas c, points will plot out the word "DISPERSE"<br/>
+                    // top left point starts at (100, 150),  cursor's range at 150px, noise factor of 0.5<br/>
+                    lib.scatter("scatter", 100, 150, 150, 0.5)<br/><br/>
+
+                    // Check out Scatter demo in header to see effect!
+                </code>
+            </div>
+            <br/>
+            <h3 class="doc-title">assemble Animation</h3>
+            <table class="doc-table">
+                <thead>
+                    <tr>
+                        <th>Property Name</th>
+                        <th>Default value</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>text</td>
+                        <td>"ASSEMBLE"</td>
+                        <td>string</td>
+                        <td>"The text wish to be rendered on canvas." All letters are Captialized at the moment!<br/>
+                            (note: use "/" to switch line in the input text)
+                        </td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>x_modifier</td>
+                        <td>100</td>
+                        <td>int/float</td>
+                        <td>"The starting x coordinate of the top left point."</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>y_modifier</td>
+                        <td>100</td>
+                        <td>int/float</td>
+                        <td>"The starting y coordinate of the top left point."</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>return_speed</td>
+                        <td>15</td>
+                        <td>int/float</td>
+                        <td>"The speed that controls how fast the points would return to their original position, the larger the number, the slower they return."</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>noise</td>
+                        <td>0.5</td>
+                        <td>float</td>
+                        <td>"The noise argument controls how much fluctuation the points will make, the larger the number, the more vibrant the points will be."</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3 class="ex-title">assemble example</h3>
+            <div class="code-display-div">
+                <code class="code-display">
+                    const c = document.createElement("canvas") <br/>
+                    const lib = AEB(c, 6, "blue", true, 10, 15) <br/>
+                    // add disperse animation on canvas c, points will plot out the word "DISPERSE"<br/>
+                    // top left point starts at (55, 150), noise factor of 0.5, with return speed of 50<br/>
+                    lib.assemble("assemble", 55, 150, 0.5, 50)<br/><br/>
+
+                    // Check out Assemble demo in header to see effect!
+                </code>
+            </div>
+            <br/>
+
+            
+
+
+   </div>
+
+ </body>
+
+</html>
