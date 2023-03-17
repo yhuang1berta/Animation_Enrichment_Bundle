@@ -1,7 +1,3 @@
-# js-library-huang853
-
-# This repo contains individual project for huang853 (version: final)
-
 ## Project Name : Animation Enrichment Bundle (AEB)
 
 #### The website is : [Animation Enrichment Bundle](https://salty-fortress-52521.herokuapp.com)
@@ -48,15 +44,17 @@ After clicking on canvas, the points will start to travel to their destination, 
 First clone the git repo (repo is private for now)
 
 ```
-git clone https://github.com/csc309-summer-2020/js-library-huang853.git
+git clone https://github.com/yhuang1berta/Animation_Enrichment_Bundle.git
 ```
 
 then
 
 ```
-cd js-library-huang853/pub/js
+cd Animation_Enrichment_Bundle/pub/js
 ### Start the server locally
 cp AEB.js ~/your_working_directory
+### open main page's HTML to checkout the landing page and some examples.
+open ../example.html
 ```
 import the file through html script tag or any other way, then you are all set!
 
