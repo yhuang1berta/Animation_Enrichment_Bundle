@@ -1,6 +1,6 @@
 ## Project Name : Animation Enrichment Bundle (AEB)
 
-#### The website is : [Animation Enrichment Bundle](https://salty-fortress-52521.herokuapp.com)
+#### The website is : [Animation Enrichment Bundle](https://yhuang1berta.github.io/Animation_Enrichment_Bundle/pub/index.html)
 
 ## Introduction
   This library's primary function is to plot text with points on any canvas object and let the user interact with those points by utilizes the canvas element and javascript's animation feature.
@@ -16,28 +16,28 @@ After clicking on canvas, the points will start to bounce around inside the canv
 
 Clicking more than once will result in the points to accelerate.
 
-#### [link to Text Fall demo](https://salty-fortress-52521.herokuapp.com/textFall.html)
+#### [link to Text Fall demo](https://yhuang1berta.github.io/Animation_Enrichment_Bundle/pub/textfall.html)
 
 ## Disperse Animation
 Ploting the passed in text using points on canvas.
 
 Moving the cursor close to the points will result them to first scatter, then comes back if the cursor is far away enough!
 
-#### [link to Disperse demo](https://salty-fortress-52521.herokuapp.com/disperse.html)
+#### [link to Disperse demo](https://yhuang1berta.github.io/Animation_Enrichment_Bundle/pub/disperse.html)
 
 ## Scatter Animation
 Ploting the passed in text using points on canvas.
 
 Moving the cursor close to the points will result them to first scatter, then the points will stay at where they are!
 
-#### [link to Scatter demo](https://salty-fortress-52521.herokuapp.com/scatter.html)
+#### [link to Scatter demo](https://yhuang1berta.github.io/Animation_Enrichment_Bundle/pub/scatter.html)
 
 ## Assemble Animation
 There would be points bouncing in the canvas at first.
 
 After clicking on canvas, the points will start to travel to their destination, and eventually forming the text!
 
-#### [link to Assemble demo](https://salty-fortress-52521.herokuapp.com/assemble.html)
+#### [link to Assemble demo](https://yhuang1berta.github.io/Animation_Enrichment_Bundle/pub/assemble.html)
 
 ## To Use the API
 
@@ -64,6 +64,6 @@ import the file through html script tag or any other way, then you are all set!
 
 #### Documentation Link
 
- Please use the following link to access the documentation of the library: [Documentation page](https://salty-fortress-52521.herokuapp.com/documentation.html)
+ Please use the following link to access the documentation of the library: [Documentation page](https://yhuang1berta.github.io/Animation_Enrichment_Bundle/pub/documentation.html)
 
 #### 
